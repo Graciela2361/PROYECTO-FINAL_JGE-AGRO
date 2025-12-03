@@ -1,0 +1,79 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 2 dic. 2025, 11:03:06 p. m.
+    Author     : ASUS TUF GAMING F15
+*/
+/* Ajustes específicos para esta página (no rompen tu CSS) */
+.panel {
+    background: #fff;
+    padding: 18px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom:20px;
+}
+.form-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:12px;
+    align-items:end;
+}
+.small {
+    width:auto;
+    display:inline-block;
+    padding:10px 14px;
+}
+.controls {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:8px;
+}
+table.serv-table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:14px;
+}
+table.serv-table th, table.serv-table td {
+    padding:10px;
+    border:1px solid rgba(0,0,0,0.08);
+    text-align:left;
+}
+table.serv-table th {
+    background:#e8f5e9;
+    color:#1b5e20;
+}
+.tabs {
+    display:flex;
+    gap:8px;
+    margin-bottom:12px;
+    flex-wrap:wrap;
+}
+.tab {
+    padding:8px 12px;
+    border-radius:8px;
+    background:#f1f8f1;
+    cursor:pointer;
+    color:#2e7d32;
+    font-weight:600;
+}
+.tab.active {
+    background:#2e7d32;
+    color:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,0.12);
+}
+.hidden {
+    display:none;
+}
+.media-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:12px;
+}
+@media (max-width:800px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+}

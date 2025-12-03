@@ -1,0 +1,224 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 9 set. 2025, 8:35:13 a. m.
+    Author     : Usuario
+*/
+/* ==========================================================
+   ESTILOS GENERALES
+========================================================== */
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background: #f3f8f3;
+  color: #333;
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 10px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .3s, transform .2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #a5d6a7;
+  transform: scale(1.05);
+}
+
+/* Submenú */
+.menu-item { position: relative; }
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2e7d32;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  transition: background .2s;
+}
+
+.submenu li a:hover { background: #388e3c; }
+
+.menu-item:hover .submenu { display: block; }
+
+/* ==========================================================
+   HEADER
+========================================================== */
+header { 
+  background: #1b5e20; 
+  color: white; 
+  text-align: center; 
+  padding: 60px 20px;
+  margin-top: 80px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+header .logo {
+  width: 70px;
+  height: auto;
+  border-radius: 50%; 
+  margin-bottom: 10px;
+}
+
+/* ==========================================================
+   SECCIÓN DEL BLOG
+========================================================== */
+section {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h2 {
+  color: #1b5e20;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================
+   GRID DE ARTÍCULOS
+========================================================== */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.producto {
+  background: white;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.producto img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.producto a {
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background .3s;
+}
+
+.producto a:hover {
+  background: #1b5e20;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+@media (max-width: 600px) {
+  .catalogo { grid-template-columns: 1fr; }
+
+  .producto img {
+    height: 160px;
+  }
+}
+
+
+/* Botón flotante */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #ff7b00; /* tu color naranja */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    background: #e96e00;
+}
+

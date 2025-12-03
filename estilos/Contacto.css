@@ -1,0 +1,222 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 9 set. 2025, 8:35:34 a. m.
+    Author     : Usuario
+*/
+
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: #f4f7f4; 
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 10px 40px;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Logo izquierda, menú derecha */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #a5d6a7;
+}
+
+/* Submenú */
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2e7d32;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+.submenu li a:hover {
+  background: #388e3c;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header { 
+  background: #1b5e20; 
+  color: white; 
+  text-align: center; 
+  padding: 60px 20px; /* más espacio */
+  margin-top: 80px; /* 👈 esto empuja el header debajo del nav */
+}
+
+header .logo {
+  width: 60px;  /* tamaño del logo */
+  height: auto; /* mantiene la proporción */
+  border-radius: 50%; 
+}
+
+main {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+.page-title, h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form-section {
+  flex: 1 1 65%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-info-sidebar {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.checkpri {
+   text-align: center;
+   font-size: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 15px auto;
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links img {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-form-section, 
+  .contact-info-sidebar {
+    width: 100%;
+  }
+}
+
+/* Botón flotante */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #ff7b00; /* tu color naranja */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    background: #e96e00;
+}

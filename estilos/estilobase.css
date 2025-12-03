@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 9 set. 2025, 8:10:47 a. m.
+    Author     : Usuario
+*/
+
+/* ===== ESTILOS GENERALES ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== MENÚ ===== */
+nav {
+  background: #333;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  background: url("imagenes/campo.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* ===== SECCIONES ===== */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* ===== LISTAS ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0;
+}
+
+/* ===== BARRA LATERAL ===== */
+.sidebar {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+/* ===== CTA (Llamado a la acción) ===== */
+.cta {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* ===== BOTONES ===== */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background: #45a049;
+}
+
+/* ===== FORMULARIO ===== */
+form input, 
+form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
