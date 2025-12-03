@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema - Gestión de Servicios | JGEAGRO</title>
+  <!-- Usa tus estilos existentes -->
+  <link rel="stylesheet" href="estilos/Silvicultura.css">
+  <link rel="stylesheet" href="estilos/footer.css">
+  <link rel="stylesheet" href="estilos/Servicios.css">
+</head>
+<body>
+
+  <header>
+      <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+      <h1>JGEAGRO</h1>
+      <p>Cuidando la tierra, alimentando el futuro</p>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <div class="menu-item">
+          <a href="productos.html">Productos ▼</a>
+          <ul class="submenu">
+            <li><a href="Semillas.html">Semillas</a></li>
+            <li><a href="Abonos.html">Abonos</a></li>
+            <li><a href="Materiales.html">Materiales</a></li>
+          </ul>
+        </div>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="silvicultura.html">Silvicultura</a>
+        <a href="contacto.html">Contáctanos</a>
+        <a href="Servicios.html" class="active">Sistema</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro panel">
+      <h2>Gestión Completa de Servicios</h2>
+      <p>Este sistema permite administrar todos los servicios ofrecidos por la empresa: registrar, buscar, editar,
+          eliminar y ordenar cada uno de manera rápida y organizada.</p>
+    </section>
+
+    <!-- Tabs para secciones: Servicios / Clientes / Reclamos -->
+    <div class="panel">
+      <div class="tabs" role="tablist">
+        <div class="tab active" data-tab="servicios">Servicios</div>
+      </div>
+
+      <!-- ======== SERVICIOS (principal: sistema de gestión) ======== -->
+      <div id="servicios" class="tab-content">
+        <h3>Gestión de Servicios Agrícolas</h3>
+
+        <div class="form-grid">
+          <div>
+            <label> ID del servicio </label>
+            <input id="srv-id" type="text" placeholder="ej: S001">
+          </div>
+          <div>
+            <label> Nombre del servicio </label>
+            <input id="srv-nombre" type="text" placeholder="Siembra, Riego, Control de plagas">
+          </div>
+          <div>
+            <label> Costo (S/.) </label>
+            <input id="srv-costo" type="number" step="0.01" placeholder="0.00">
+          </div>
+          <div>
+            <label> Categoría </label>
+            <select id="srv-categoria">
+              <option value="Siembra">Siembra</option>
+              <option value="Riego">Riego</option>
+              <option value="Fertilizacion">Fertilización</option>
+              <option value="ControlPlagas">Control de plagas</option>
+              <option value="Mantenimiento">Mantenimiento</option>
+            </select>
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <label> Descripción </label>
+            <textarea id="srv-desc" rows="2" placeholder="Breve descripción del servicio"></textarea>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="small" onclick="insertarServicio()">➕ Insertar</button>
+          <button class="small" onclick="buscarServicioUI()">🔍 Buscar</button>
+          <button class="small" onclick="editarServicioUI()">✏️ Editar</button>
+          <button class="small" onclick="eliminarServicioUI()">🗑️ Eliminar</button>
+          <button class="small" onclick="mostrarServicios()">📋 Mostrar todos</button>
+          <button class="small" onclick="ordenarPorCosto()">↕️ Ordenar por costo</button>
+          <button class="small" onclick="vaciarServicios()">♻️ Vaciar</button>
+        </div>
+
+        <table class="serv-table" id="tablaServicios">
+          <thead>
+            <tr><th>ID</th><th>Nombre</th><th>Categoría</th><th>Costo</th><th>Descripción</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p style="margin-top:8px; font-size:0.9rem; color:#666;">Haz clic en una fila para cargar el servicio en el formulario y editarlo.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer: usa tu estructura actual -->
+  <footer class="pie pie--suave">
+    <div class="contenedor">
+        <div class="bloques">
+            <section class="bloque">
+                <h4>Conócenos</h4>
+                <ul class="lista puntos">
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="libro_reclamacione.html">Libro de reclamos</a></li>
+                    <li><a href="testimonios.html" >Testimonios</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                </ul>
+            </section>
+            <section class="bloque">
+                <h4>productos</h4>
+                <ul class="lista puntos">
+                    <li><a href="Semillas.html">Semillas</a></li>
+                    <li><a href="Abonos.html">Abonos</a></li>
+                    <li><a href="Materiales.html">Materiales</a></li>
+                </ul>
+            </section>
+            <section class="bloque">
+                <h4>Comunícate con nosotros</h4>
+                <ul class="lista puntos">
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><strong>Email</strong><br><a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                    <li><strong>Llámanos</strong>: +51 941 405 220</li>
+                </ul>
+            </section>
+            <section class="bloque">
+                <h4>Síguenos</h4>
+                <ul class="lista puntos">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="pie-legal">
+            <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+        </div>
+    </div>
+  </footer>
+
+<script src="js/serv.js"></script>
+</body>
+</html>

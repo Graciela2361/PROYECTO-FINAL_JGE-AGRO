@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Semillas</title>
+        <link rel="stylesheet" href="estilos/productosySatisfacción.css">
+        <link rel="stylesheet" href="estilos/footer.css">
+        <link rel="stylesheet" href="estilos/carritoCompras.css">
+        <script src="js/Car.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+            <h1>JGEAGRO</h1>
+            <p>Cuidando la tierra, alimentando el futuro</p>
+        </header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Inicio</a>
+
+                    <div class="menu-item">
+                        <a href="productos.html">Productos ▼</a>
+                        <ul class="submenu">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contáctanos</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="silvicultura.html">Silvicultura</a>
+                    <!-- ÍCONO DEL CARRITO -->
+                    <span class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PANEL DEL CARRITO -->
+        <div id="cart-panel">
+            <div id="close-cart" onclick="closeCart()">✖</div>
+
+            <h3>Carrito de Compras</h3>
+
+            <ul id="cart-items"></ul>
+
+            <p><strong>Total: S/ <span id="cart-total">0.00</span></strong></p>
+
+            <button id="btn-clear" class="btn-clear" onclick="clearCart()">Vaciar carrito</button>
+            <button id="btn-pay" class="btn-pay" onclick="pagar()">Pagar</button>
+        </div>
+        <!-- SECCIÓN DONDE MOSTRAMOS CONFIRMACIONES Y MENSAJES -->
+        <section id="payment-section" class="payment-section" style="max-width:900px; margin:20px auto; display:none;">
+            <div id="payment-message" style="background:#f0f9f4; border:1px solid #cfe9d9; padding:15px; border-radius:8px;">
+            </div>
+        </section>
+
+
+        <main>
+            <h2>Semillas</h2>
+            
+            <!-- BUSCADOR -->
+             <div class="search-container">
+              <i class="search-icon">🔍</i>
+               <input type="text" id="buscar" placeholder="Buscar semillas...">
+             </div>
+
+            <div class="catalogo">
+
+                <div class="item">
+                    <img src="imgpro/maiz.jpg" class="imagen-producto">
+                    <p><strong>Maíz</strong><br><em>Precio: S/ 12</em></p>
+                    <button class="btn-add" onclick="addToCart('Maíz', 12)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/papa.jpg" class="imagen-producto">
+                    <p><strong>Papa</strong><br><em>Precio: S/ 15</em></p>
+                    <button class="btn-add" onclick="addToCart('Papa', 15)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/tomate.jpg" class="imagen-producto">
+                    <p><strong>Tomate</strong><br><em>Precio: S/ 10</em></p>
+                    <button class="btn-add" onclick="addToCart('Tomate', 10)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/quinua.jpg" class="imagen-producto">
+                    <p><strong>Quinua</strong><br><em>Precio: S/ 20</em></p>
+                    <button class="btn-add" onclick="addToCart('Quinua', 20)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/frejol.jpg" class="imagen-producto">
+                    <p><strong>Frejol</strong><br><em>Precio: S/ 14</em></p>
+                    <button class="btn-add" onclick="addToCart('Frejol', 14)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/lechuga.jpg" class="imagen-producto">
+                    <p><strong>Lechuga</strong><br><em>Precio: S/ 8</em></p>
+                    <button class="btn-add" onclick="addToCart('Lechuga', 8)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/arveja.jpg" class="imagen-producto">
+                    <p><strong>Arveja</strong><br><em>Precio: S/ 13</em></p>
+                    <button class="btn-add" onclick="addToCart('Arveja', 13)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/trigo.jpg" class="imagen-producto">
+                    <p><strong>Trigo</strong><br><em>Precio: S/ 11</em></p>
+                    <button class="btn-add" onclick="addToCart('Trigo', 11)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/cebolla.jpg" class="imagen-producto">
+                    <p><strong>Cebolla</strong><br><em>Precio: S/ 9</em></p>
+                    <button class="btn-add" onclick="addToCart('Cebolla', 9)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/zanahoria.jpg" class="imagen-producto">
+                    <p><strong>Zanahoria</strong><br><em>Precio: S/ 10</em></p>
+                    <button class="btn-add" onclick="addToCart('Zanahoria', 10)">Agregar</button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="pie pie--suave">
+            <div class="contenedor">
+                <div class="bloques">
+
+                    <section class="bloque">
+                        <h4>Conócenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="libro_reclamacione.html">Libro de Reclamos</a></li>
+                            <li><a href="Testimonios.html">Testimonios</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Productos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Comunícate con nosotros</h4>
+                        <ul class="lista puntos">
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><strong>Email</strong><br><a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                            <li><strong>Llámanos</strong>: +51 941 405 220</li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Síguenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                        </ul>
+                    </section>
+                    
+                </div>
+                
+                <div class="pie-legal">
+                    <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+                    <div>
+                        <a href="TerminosYCondiciones.html" class="enlace-legal">Términos y Condiciones</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

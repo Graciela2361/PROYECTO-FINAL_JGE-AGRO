@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Materiales Inorgánicos</title>
+
+        <!-- ESTILOS -->
+        <link rel="stylesheet" href="estilos/productosySatisfacción.css">
+        <link rel="stylesheet" href="estilos/footer.css">
+        <link rel="stylesheet" href="estilos/carritoCompras.css">
+
+        <!-- JAVASCRIPT -->
+        <script src="js/Car.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <header>
+            <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+            <h1>JGEAGRO</h1>
+            <p>Cuidando la tierra, alimentando el futuro</p>
+        </header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+
+                    <div class="menu-item">
+                        <a href="productos.html">Productos ▼</a>
+                        <ul class="submenu">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contáctanos</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="silvicultura.html">Silvicultura</a>
+                    
+                    <!-- ÍCONO DEL CARRITO -->
+                    <span class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PANEL DEL CARRITO -->
+        <div id="cart-panel">
+            <div id="close-cart" onclick="closeCart()">✖</div>
+
+            <h3>Carrito de Compras</h3>
+
+            <ul id="cart-items"></ul>
+
+            <p><strong>Total: S/ <span id="cart-total">0.00</span></strong></p>
+
+            <button id="btn-clear" class="btn-clear" onclick="clearCart()">Vaciar carrito</button>
+            <button id="btn-pay" class="btn-pay" onclick="pagar()">Pagar</button>
+        </div>
+        <!-- SECCIÓN DONDE MOSTRAMOS CONFIRMACIONES Y MENSAJES -->
+        <section id="payment-section" class="payment-section" style="max-width:900px; margin:20px auto; display:none;">
+            <div id="payment-message" style="background:#f0f9f4; border:1px solid #cfe9d9; padding:15px; border-radius:8px;">
+            </div>
+        </section>
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+            <h2>Materiales Inorgánicos</h2>
+            
+            <!-- BUSCADOR -->
+             <div class="search-container">
+              <i class="search-icon">🔍</i>
+               <input type="text" id="buscar" placeholder="Buscar Materiales...">
+             </div>
+
+            <div class="catalogo">
+
+                <div class="item">
+                    <img src="imgpro/urea.jpg" alt="Urea">
+                    <p><strong>Urea</strong><br><em>Precio: S/ 80</em></p>
+                    <button class="btn-add" onclick="addToCart('Urea', 80)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/sulfato_amonio.jpg" alt="Sulfato de Amonio">
+                    <p><strong>Sulfato de Amonio</strong><br><em>Precio: S/ 70</em></p>
+                    <button class="btn-add" onclick="addToCart('Sulfato de Amonio', 70)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/fosfato_diamonico.jpg" alt="Fosfato Diamónico">
+                    <p><strong>Fosfato Diamónico</strong><br><em>Precio: S/ 90</em></p>
+                    <button class="btn-add" onclick="addToCart('Fosfato Diamónico', 90)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/cloruro_potasio.png" alt="Cloruro de Potasio">
+                    <p><strong>Cloruro de Potasio</strong><br><em>Precio: S/ 85</em></p>
+                    <button class="btn-add" onclick="addToCart('Cloruro de Potasio', 85)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/nitrato_calcio.jpg" alt="Nitrato de Calcio">
+                    <p><strong>Nitrato de Calcio</strong><br><em>Precio: S/ 95</em></p>
+                    <button class="btn-add" onclick="addToCart('Nitrato de Calcio', 95)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/superfosfato.jpg" alt="Superfosfato Triple">
+                    <p><strong>Superfosfato Triple</strong><br><em>Precio: S/ 100</em></p>
+                    <button class="btn-add" onclick="addToCart('Superfosfato Triple', 100)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/nitrato_potasio.jpg" alt="Nitrato de Potasio">
+                    <p><strong>Nitrato de Potasio</strong><br><em>Precio: S/ 110</em></p>
+                    <button class="btn-add" onclick="addToCart('Nitrato de Potasio', 110)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/fosfato_mono.jpg" alt="Fosfato Monoamónico">
+                    <p><strong>Fosfato Monoamónico</strong><br><em>Precio: S/ 120</em></p>
+                    <button class="btn-add" onclick="addToCart('Fosfato Monoamónico', 120)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/magnesio.png" alt="Sulfato de Magnesio">
+                    <p><strong>Sulfato de Magnesio</strong><br><em>Precio: S/ 75</em></p>
+                    <button class="btn-add" onclick="addToCart('Sulfato de Magnesio', 75)">Agregar</button>
+                </div>
+
+                <div class="item">
+                    <img src="imgpro/yeso.jpeg" alt="Yeso Agrícola">
+                    <p><strong>Yeso Agrícola</strong><br><em>Precio: S/ 65</em></p>
+                    <button class="btn-add" onclick="addToCart('Yeso Agrícola', 65)">Agregar</button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="pie pie--suave">
+            <div class="contenedor">
+                <div class="bloques">
+
+                    <section class="bloque">
+                        <h4>Conócenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="libro_reclamacione.html">Libro de Reclamos</a></li>
+                            <li><a href="Testimonios.html">Testimonios</a></li>
+                            <li><a href="Servicios.html">Servicios</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Productos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Comunícate con nosotros</h4>
+                        <ul class="lista puntos">
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><strong>Email:</strong> <a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                            <li><strong>Llámanos:</strong> +51 941 405 220</li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Síguenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <div class="pie-legal">
+                    <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+                    <div>
+                        <a href="TerminosYCondiciones.html" class="enlace-legal">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

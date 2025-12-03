@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Comparador - JGEAGRO</title>
+
+        <!-- Tus estilos principales -->
+        <link rel="stylesheet" href="estilos/Testimonios.css">
+        <link rel="stylesheet" href="estilos/footer.css">
+    </head>
+
+    <body>
+
+        <!-- CABECERA -->
+        <header>
+            <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo" />
+            <h1>JGEAGRO</h1>
+            <p>Escuchamos a nuestros clientes. Crecemos contigo.</p>
+        </header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo" />
+
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <div class="menu-item">
+                        <a href="productos.html">Productos ▼</a>
+                        <ul class="submenu">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </div>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="silvicultura.html">Silvicultura</a>
+                    <a href="contacto.html">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SECCIÓN PRINCIPAL -->
+        <section class="testimonios-section">
+            <h2>Testimonios de Nuestros Clientes</h2>
+            <p>Opiniones reales de agricultores que confían en JGEAGRO.</p>
+
+            <div id="contenedor-testimonios" class="testimonios-grid"></div>
+
+            <button class="testimonios-btn" onclick="agregarTestimonio()">Agregar Testimonio</button>
+
+            <button class="testimonios-btn" onclick="filtrarEstrellas()">Filtrar por Estrellas</button>
+        </section>
+
+        <script src="js/js1.js"></script>
+
+
+        <!-- VIDEO INFORMATIVO EXTRA -->
+        <div class="video-section">
+            <h3>Historias de éxito</h3>
+            <video controls autoplay muted loop>
+                <source src="video/ser.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="pie pie--suave">
+            <div class="contenedor">
+                <div class="bloques">
+
+                    <section class="bloque">
+                        <h4>Conócenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="libro_reclamacione.html">Libro de Reclamos</a></li>
+                            <li><a href="Testimonios.html">Testimonios</a></li>
+                            <li><a href="Servicios.html">Servicios</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Productos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Comunícate con nosotros</h4>
+                        <ul class="lista puntos">
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><strong>Email</strong><br><a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                            <li><strong>Llámanos</strong>: +51 941 405 220</li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Síguenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="pie-legal">
+                    <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+                    <div>
+                        <a href="TerminosYCondiciones.html" class="enlace-legal">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/testimonios.js"></script>
+    </body>
+</html>

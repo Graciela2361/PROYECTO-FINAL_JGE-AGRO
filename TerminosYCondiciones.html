@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Términos y Condiciones - JGEAGRO</title>
+
+        <style>
+            /* General */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                background: #f4f4f4;
+                color: #222;
+            }
+
+            /* Navbar */
+            .navbar {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 12px 30px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                backdrop-filter: blur(6px);
+                z-index: 100;
+            }
+
+            .nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 20px;
+            }
+
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .nav-links a.active {
+                color: #4caf50;
+            }
+
+            /* Contenido */
+            .contenido {
+                padding: 120px 20px 40px;
+                max-width: 900px;
+                margin: auto;
+            }
+
+            h1 {
+                text-align: center;
+                color: #1b5e20;
+            }
+
+            .intro {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 18px;
+            }
+
+            .seccion {
+                background: #fff;
+                padding: 20px;
+                margin-top: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            }
+
+            .lista {
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+
+            .lista li {
+                margin-bottom: 8px;
+            }
+
+            /* Pie */
+            .pie {
+                text-align: center;
+                padding: 20px;
+                background: #1b5e20;
+                color: white;
+                margin-top: 40px;
+            }
+
+            /* Responsive */
+            @media (max-width: 750px){
+                .nav-links {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <img src="imagenes/logo.jpg" class="logo" alt="Logo">
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="libro_reclamacione.html">Libro de Reclamos</a>
+                    <a href="condiciones_datos.html" class="active">Términos y Condiciones</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="contenido">
+            <h1>Términos y Condiciones de Datos Personales</h1>
+
+            <p class="intro">
+                En JGEAGRO nos comprometemos con la privacidad y la protección de los datos personales 
+                de nuestros usuarios y clientes, conforme a la Ley N.° 29733 – Ley de Protección de 
+                Datos Personales y su Reglamento.
+            </p>
+
+            <section class="seccion">
+                <h2>1. Responsable del Tratamiento</h2>
+                <p>
+                    JGEAGRO, ubicado en Rioja – San Martín, es responsable del tratamiento de los datos 
+                    proporcionados a través de formularios de contacto y libro de reclamaciones.
+                </p>
+            </section>
+
+            <section class="seccion">
+                <h2>2. Datos que Recopilamos</h2>
+                <ul class="lista">
+                    <li>Nombres y apellidos</li>
+                    <li>Correo electrónico</li>
+                    <li>Teléfono</li>
+                    <li>Dirección o zona</li>
+                    <li>Información de reclamos o consultas</li>
+                </ul>
+            </section>
+
+            <section class="seccion">
+                <h2>3. Finalidad del Tratamiento</h2>
+                <ul class="lista">
+                    <li>Atender consultas enviadas por formularios.</li>
+                    <li>Gestionar reclamos registrados.</li>
+                    <li>Enviar información sobre servicios o productos.</li>
+                    <li>Realizar comunicaciones administrativas.</li>
+                </ul>
+            </section>
+
+            <section class="seccion">
+                <h2>4. Conservación de los Datos</h2>
+                <p>Los datos serán conservados mientras exista relación o comunicación activa con el usuario.</p>
+            </section>
+
+            <section class="seccion">
+                <h2>5. Derechos del Usuario</h2>
+                <ul class="lista">
+                    <li><strong>Acceso</strong> — saber qué datos tiene la empresa.</li>
+                    <li><strong>Rectificación</strong> — modificar datos incorrectos.</li>
+                    <li><strong>Cancelación</strong> — solicitar eliminación de datos.</li>
+                    <li><strong>Oposición</strong> — evitar tratamiento no deseado.</li>
+                </ul>
+            </section>
+
+            <section class="seccion">
+                <h2>6. Seguridad</h2>
+                <p>
+                    JGEAGRO aplica medidas técnicas y organizacionales para evitar accesos no autorizados 
+                    o pérdida de información.
+                </p>
+            </section>
+
+            <section class="seccion">
+                <h2>7. Consentimiento</h2>
+                <p>Al usar nuestros formularios, el usuario acepta estas condiciones.</p>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <p>© 2025 JGEAGRO – Todos los derechos reservados</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Libro de Reclamaciones - JGEAGRO</title>
+        <link rel="stylesheet" href="estilos/libro.css">
+        <link rel="stylesheet" href="estilos/footer.css">
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <header>
+            <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+            <div class="header-texto">
+                <h1>JGEAGRO</h1>
+                <p>Cuidando la tierra, alimentando el futuro</p>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="reclamaciones-container">
+            <h1>Libro de Reclamaciones</h1>
+            <p class="intro">
+                Conforme al Decreto Supremo N° 011-2011-PCM, JGEAGRO pone a disposición de sus clientes este libro de reclamaciones virtual.
+                Complete el siguiente formulario para registrar su reclamo o queja.
+            </p>
+
+            <form class="reclamaciones-form">
+                <fieldset>
+                    <legend>Datos del Consumidor</legend>
+                    <label>Nombre y Apellidos *</label>
+                    <input type="text" required>
+
+                    <label>DNI / CE *</label>
+                    <input type="text" required>
+
+                    <label>Teléfono / Celular *</label>
+                    <input type="tel" required>
+
+                    <label>Correo Electrónico *</label>
+                    <input type="email" required>
+
+                    <label>Dirección *</label>
+                    <input type="text" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Bien Contratado</legend>
+                    <label>Tipo *</label>
+                    <select required>
+                        <option value="">Seleccione...</option>
+                        <option value="producto">Producto</option>
+                        <option value="servicio">Servicio</option>
+                    </select>
+
+                    <label>Descripción *</label>
+                    <textarea rows="3" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalle del Reclamo o Queja</legend>
+                    <label>Tipo de Solicitud *</label>
+                    <select required>
+                        <option value="">Seleccione...</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="queja">Queja</option>
+                    </select>
+
+                    <label>Descripción *</label>
+                    <textarea rows="4" required></textarea>
+
+                    <label>Pedido del consumidor *</label>
+                    <textarea rows="3" required></textarea>
+                </fieldset>
+
+                <div class="confirmacion">
+                    <input type="checkbox" required>
+                    <label>Declaro ser el titular del reclamo y haber leído la 
+                        <a href="TerminosYCondiciones.html">política de tratamiento de datos</a>.
+                    </label>
+                </div>
+
+                <button type="submit">Enviar Reclamo</button>
+            </form>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="pie pie--suave">
+            <div class="contenedor">
+                <div class="bloques">
+
+                    <section class="bloque">
+                        <h4>Conócenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="libro_reclamacione.html">Libro de Reclamos</a></li>
+                            <li><a href="Testimonios.html">Testimonios</a></li>
+                            <li><a href="Servicios.html">Servicios</a></li>
+                        </ul>
+                    </section>
+                    <section class="bloque">
+                        <h4>productos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+
+                        </ul>
+                    </section>
+                    <section class="bloque">
+                        <h4>Comunícate con nosotros</h4>
+                        <ul class="lista puntos">
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><strong>Email</strong><br><a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                            <li><strong>Llámanos</strong>: +51 941 405 220</li>
+                        </ul>
+                    </section>
+                    <section class="bloque">
+                        <h4>Síguenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="pie-legal">
+                    <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+                    <div>
+                        <a href="TerminosYCondiciones.html" class="enlace-legal">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
+
+

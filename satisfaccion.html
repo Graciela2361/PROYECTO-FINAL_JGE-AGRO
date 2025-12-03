@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Encuesta de Satisfacción - JGEAGRO</title>
+
+        <!-- Tus estilos -->
+        <link rel="stylesheet" href="estilos/productosySatisfacción.css">
+        <link rel="stylesheet" href="estilos/footer.css">
+
+        <script>
+            // ================================
+            //         LÓGICA DE ENCUESTA
+            // ================================
+            let respuestas = [];
+
+            function iniciarEncuesta() {
+                let seguir = true;
+
+                while (seguir) {
+                    let valor = prompt("Califica nuestra tienda del 1 al 5 ⭐");
+
+                    if (valor === null) {
+                        alert("Encuesta cancelada");
+                        return;
+                    }
+
+                    valor = parseInt(valor);
+
+                    if (isNaN(valor) || valor < 1 || valor > 5) {
+                        alert("❌ Ingresa un número válido entre 1 y 5");
+                        continue;
+                    }
+
+                    respuestas.push(valor);
+
+                    seguir = confirm("¿Quieres ingresar otra respuesta?");
+                }
+
+                mostrarResultados();
+            }
+
+            function mostrarResultados() {
+                let total = 0;
+
+                for (let i = 0; i < respuestas.length; i++) {
+                    total += respuestas[i];
+                }
+
+                let promedio = total / respuestas.length;
+                let mensaje = "";
+
+                if (promedio >= 4.5)
+                    mensaje = "Excelente servicio 😍";
+                else if (promedio >= 3.5)
+                    mensaje = "Muy buen servicio 🙂";
+                else if (promedio >= 2.5)
+                    mensaje = "Servicio regular 😐";
+                else
+                    mensaje = "Debemos mejorar 😢";
+
+                document.getElementById("promedio").textContent = promedio.toFixed(2);
+                document.getElementById("mensaje").textContent = mensaje;
+
+                let lista = document.getElementById("lista-respuestas");
+                lista.innerHTML = "";
+
+                respuestas.forEach((r, index) => {
+                    lista.innerHTML += `<li>P${index + 1}: ⭐ ${r}</li>`;
+                });
+
+                document.getElementById("resultados").style.display = "block";
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Inicio</a>
+                    <div class="menu-item">
+                        <a href="productos.html">Productos ▼</a>
+                        <ul class="submenu">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </div>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contáctanos</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="silvicultura.html">Silvicultura</a>
+                </div>
+            </div>
+        </nav>
+        <!-- HEADER -->
+        <header>
+            <img src="imagenes/logo.jpg" alt="Logo JGEAGRO" class="logo">
+            <h1>Encuesta de Satisfacción</h1>
+            <p>Tu opinión nos ayuda a mejorar 🌱</p>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <section>
+            <h2>Queremos escucharte</h2>
+
+            <div class="catalogo" style="max-width:600px; margin:auto;">
+                <div class="item">
+                    <p>Haz clic para responder la encuesta.</p>
+
+                    <button class="btn-add" onclick="iniciarEncuesta()">
+                        Iniciar encuesta ⭐
+                    </button>
+                </div>
+            </div>
+
+            <!-- RESULTADOS -->
+            <div id="resultados" style="display:none; margin-top:30px; text-align:center;">
+                <h2>Resultados</h2>
+                <p><strong>Promedio de calificación:</strong> ⭐ <span id="promedio"></span></p>
+                <p id="mensaje" style="font-size:1.2em; color:#1b5e20; font-weight:bold;"></p>
+
+                <ul id="lista-respuestas" 
+                    style="list-style:none; padding:0; max-width:400px; margin:20px auto;">
+                </ul>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="pie pie--suave">
+            <div class="contenedor">
+                <div class="bloques">
+
+                    <section class="bloque">
+                        <h4>Conócenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="libro_reclamacione.html">Libro de Reclamos</a></li>
+                            <li><a href="Testimonios.html">Testimonios</a></li>
+                            <li><a href="Servicios.html">Servicios</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Productos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="Semillas.html">Semillas</a></li>
+                            <li><a href="Abonos.html">Abonos</a></li>
+                            <li><a href="Materiales.html">Materiales</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Contáctanos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><strong>Email</strong><br><a href="mailto:ventas@JGEAGRO.com">ventas@JGEAGRO.com</a></li>
+                            <li><strong>Teléfono:</strong> +51 941 405 220</li>
+                        </ul>
+                    </section>
+
+                    <section class="bloque">
+                        <h4>Síguenos</h4>
+                        <ul class="lista puntos">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="pie-legal">
+                    <div>© 2025 jgeagrosingdesistemas - Todos los derechos reservados</div>
+                    <div>
+                        <a href="TerminosYCondiciones.html" class="enlace-legal">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
